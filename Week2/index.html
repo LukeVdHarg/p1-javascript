@@ -7,7 +7,23 @@
 </head>
 <body>
   <h1 id="Text" onclick="changeText()">Tekst</h1>
+  <input id="inputBox" type="number" oninput="multiplyBy5()">
+  <h2 id="Answer"></h2>
+  <br>
+  <br>
+  <input type="number" id="timeInput" oninput="calculateTime()">
+  <h2 id="calculatedTime"></h2>
+  <br><br><br>
+  <div>
+    <input type="number" id="calculatorInput">
+    <button id="calcSum" onclick="calculator(1)">+</button>
+    <button id="calcMultiply" onclick="calculator(2)">*</button>
+    <button id="calcDivide" onclick="calculator(3)">/</button>
+    <button id="calcEquals" onclick="calculator(4)">=</button>
+    <button id="calcEquals" onclick="calculator(5)">Reset</button>
+    <h2 id="calcAnswer"></h2>
+  </div>
 
   <script defer src="app.js"></script>
 </body>
-</html>
+</html> 
