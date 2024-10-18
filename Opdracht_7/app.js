@@ -11,8 +11,9 @@ function displayBudget() {
 }
 displayBudget()
 
-async function purchaseProduct(Cost, purchaseButton){
-  if (Cost < Budget){
+async function purchaseProduct(ProductCost, purchaseButton){
+  Cost = Number(ProductCost)
+  if (Cost <= Budget){
     Budget = Budget - Cost
     displayBudget()
     document.getElementById("displayMessage").style.color = "green"
@@ -56,3 +57,32 @@ async function addingBudget(Amount, budgetButton){
     document.getElementById("displayLocked").innerText = ""
   }
 } 
+customProductCost = null
+customProductInput = document.getElementById("customProductInput")
+
+function customProduct(numberValue){
+  if (numberValue == 1) {
+    if (customProductCost) {
+      console.log("Purchasing product 4")
+      console.log(customProductCost)
+      purchaseProduct(customProductCost, document.getElementById("product4"))
+    }
+    else if (customProductCost == null) {
+      console.log("Making input field visible")
+      customProductInput.style.visibility = "visible"
+      console.log(customProductInput.style.visibility)
+    }
+    }
+  else {
+    console.log("Editing cost")
+    if (customProductInput.value > 0){
+      customProductCost = customProductInput.value
+    }
+    else {
+      customProductCost = 1
+    }
+    document.getElementById("product4").innerText = "Eigen product (" + customProductCost + ")"
+    customProductInput.style.visibility = "hidden"
+    customProductInput.value = null
+  }
+}
