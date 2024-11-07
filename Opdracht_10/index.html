@@ -6,10 +6,15 @@
   <title>Document</title>
 </head>
 <body>
-  <h1 id="Antwoord">Rekenmachine</h1>
+  <!--<h1 id="Antwoord">Rekenmachine</h1>
   <input onchange="reset()" id="input1" style="width: 10%;" type="number"> <input onchange="reset()" id="input2" style="width: 10%;" type="number">
   <br><br>
   <button id="addButton" onclick="calculate(1)">+</button> <button id="subtractButton" onclick="calculate(2)">-</button> <button id="multiplyButton" onclick="calculate(3)">x</button> <button id="divideButton" onclick="calculate(4)">/</button>
+  <script defer src="app.js"></script>-->
+  <h1 id="Answer">Rekenmachine</h1>
+  <input type="number" id="Input1"> <input type="number" id="Input2">
+  <br><br>
+  <button id="addButton" onclick="Add()">+</button> <button id="subtractButton" onclick="Subtract()">-</button> <button id="multiplyButton" onclick="Multiply()">x</button> <button id="divideButton" onclick="Divide()">/</button>
   <script defer src="app.js"></script>
 </body>
 </html>

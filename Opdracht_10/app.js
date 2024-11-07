@@ -1,6 +1,4 @@
-Antwoord
-
-function reset(){
+/*function reset(){
   document.getElementById("addButton").style.backgroundColor = "gray"
   document.getElementById("subtractButton").style.backgroundColor = "gray"
   document.getElementById("multiplyButton").style.backgroundColor = "gray"
@@ -39,4 +37,28 @@ function calculate(calculatorValue) {
   else {
     document.getElementById("Antwoord").innerText = "Het getal is te laag"
   }
+}*/
+
+function Add(){
+  number1 = Number(document.getElementById("Input1").value)
+  number2 = Number(document.getElementById("Input2").value)
+  document.getElementById("Answer").innerText = number1 + number2
+}
+
+function Subtract(){
+  number1 = Number(document.getElementById("Input1").value)
+  number2 = Number(document.getElementById("Input2").value)
+  document.getElementById("Answer").innerText = number1 - number2
+}
+
+function Multiply(){
+  number1 = Number(document.getElementById("Input1").value)
+  number2 = Number(document.getElementById("Input2").value)
+  document.getElementById("Answer").innerText = number1 * number2
+}
+
+function Divide(){
+  number1 = Number(document.getElementById("Input1").value)
+  number2 = Number(document.getElementById("Input2").value)
+  document.getElementById("Answer").innerText = number1 / number2
 }
