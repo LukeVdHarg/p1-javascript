@@ -25,6 +25,12 @@ function calculateTime() { // Oefening 3
   }
 }
 
+function calculateMinutes(){ // Oefening 3 (als die andere niet goed is)
+  Seconds = Seconds = document.getElementById("timeInput").value || 0
+  Minutes = Math.round(Number(Seconds)/60)
+  console.log(Minutes)
+}
+
 function multiplyBy5() { // Oefening 2
   Number = document.getElementById("inputBox").value || 0
   MultipliedNumber = Number*5
