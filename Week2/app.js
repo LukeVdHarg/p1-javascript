@@ -1,9 +1,9 @@
-function calculate(Number1, Number2){
+function calculate(Number1, Number2){ // Oefening 1
   console.log(Number1 + Number2)
   document.getElementById("Text").innerText = Math.round(Number1 + Number2)
 }
 
-function calculateTime() {
+function calculateTime() { // Oefening 3
   Seconds = document.getElementById("timeInput").value || 0
   if (Seconds >=60) {
     Hours = Math.floor(Seconds/3600) || 0
@@ -15,7 +15,7 @@ function calculateTime() {
     if (Seconds < 10){Seconds = "0"+Seconds}
     console.log(Hours, Minutes, Seconds)
     TotalTime = Hours + ":" + Minutes + ":" + Seconds
-    document.getElementById("calculatedTime").innerText = TotalTime + " in H:M:S"
+    document.getElementById("calculatedTime").innerText = TotalTime + " in H:M:S" + " ... of " + (Number(Minutes) + (Number(Hours)*60)) + " minuten" // En alleen de minuten nu
   }
   else if (Seconds >0) {
     document.getElementById("calculatedTime").innerText = Seconds + " seconds" 
@@ -25,7 +25,7 @@ function calculateTime() {
   }
 }
 
-function multiplyBy5() {
+function multiplyBy5() { // Oefening 2
   Number = document.getElementById("inputBox").value || 0
   MultipliedNumber = Number*5
   console.log(MultipliedNumber)
@@ -45,7 +45,7 @@ function changeText() {
   calculate(Math.random(1,5)*10, Math.random(1,50)*10)
 }
 
-// ------------------------------
+// ------------------------------ Niet deel van opdracht 6 ------------------------------
 calcNumber1 = null
 currentValue = null
 
